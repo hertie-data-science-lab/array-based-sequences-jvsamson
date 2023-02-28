@@ -65,20 +65,28 @@ def run_methods(shift):
     while True:
         choice = int(input("Enter 1 to encrypt, 2 to decrypt or any number to exit: "))
         print()
+        # Check the choice for encription and encrypt/decrypt according
         if choice == 1:
+            # ask user for message to encrypt
             message = input("Input message to encrypt : ")
             print()
+            # select correct method of shifting
             coded = cipher.encrypt(message)
+            # Print the now Encrypted Message
             print("Encrypted Message : {}".format(coded))
             # Print the encryption method used and the number of shifts undertaken
             print("Encryption Method: " + type(cipher).__name__ + " with a shift of", cipher.shift)
         elif choice == 2:
+            # ask user for message to decrypt
             secret = input("Input secret to decrypt : ")
+            # select correct method of shifting
             answer = cipher.decrypt(secret)
+            # Print the now Decrypted Message
             print("Decrypted Message : {}".format(answer), end="\n")
         else:
+            # Stop the Loop if neither 1 or 2 was provided by user in order to exit 
             break
         
 
-#Run the encryption or decryption methods based on the choice of the user
+# Run the encryption or decryption methods based on the choice of the user
 run_methods(shift)
