@@ -10,7 +10,7 @@ class Caesar_Cipher:
   
   # Define a Class Constructor for creating a new Caesar cipher with a given shift amount.
   def __init__(self, shift):
-    # Create temporary arrays for encoding and decoding characters.
+    # Create temporary lists for encoding and decoding characters.
     encoder = [None] * 26
     decoder = [None] * 26
     # Iterate over each letter in the alphabet and shift it by the given amount.
@@ -40,19 +40,19 @@ class Caesar_Cipher:
   # Define the transform method
   def transform(self, message, code):
     # Create a list of characters from the original message
-    msg = list(message)
+    list_message = list(message)
     
     # Iterate over each character in the list
-    for i in range(len(msg)):
+    for i in range(len(list_message)):
         # Convert the character to uppercase and get the index in the alphabet
-        if msg[i].isalpha():
-            j = ord(msg[i].upper()) - ord('A')
+        if list_message[i].isalpha():
+            j = ord(list_message[i].upper()) - ord('A')
             
             # Replace the character with its corresponding code from the code string
-            msg[i] = code[j]
+            list_message[i] = code[j]
     
     # Join the list of characters back into a string and return it.
-    return ''.join(msg)
+    return ''.join(list_message)
 
 #Ask the user for the desired shift amount
 shift = int(input("Choose your shift amount : "))
@@ -90,3 +90,4 @@ def run_methods(shift):
 
 # Run the encryption or decryption methods based on the choice of the user
 run_methods(shift)
+
