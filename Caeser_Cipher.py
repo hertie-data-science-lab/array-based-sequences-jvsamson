@@ -3,7 +3,7 @@
 """
 Created on Mon Feb 27 17:44:59 2023
 
-@author: Justus v. Samson-Himmelstjerna and Niklas Pawelzik 
+@author: Justus v. Samson-Himmelstjerna, Niklas Pawelzik and Benedikt Korbach
 """
 # Define a class for encrypting and decrypting messages using a Caesar cipher.
 class Caesar_Cipher:
@@ -90,4 +90,3 @@ def run_methods(shift):
 
 # Run the encryption or decryption methods based on the choice of the user
 run_methods(shift)
-
